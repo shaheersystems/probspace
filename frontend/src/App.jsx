@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import { useState } from "react";
+import "./App.css";
+import AppLayout from "./layouts/AppLayout";
+import { Heading } from "./components/ui/heading";
+import { Divider } from "./components/ui/divider";
+import { Text } from "./components/ui/text";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <AppLayout>
+        <div className="space-y-2">
+          <Heading>Analytical Questions</Heading>
+          <Text>
+            This is a collection of analytical questions that are commonly asked
+            in interviews for data science, machine learning, and other
+            analytical roles.
+          </Text>
+        </div>
+        <div className="py-4">
+          <Divider />
+        </div>
+        <div className="grid gap-4 md:grid-cols-12">
+          <div className="col-span-3 p-2 bg-white"></div>
+          <div className="col-span-6 p-2 bg-white"></div>
+          <div className="col-span-3 p-2 bg-white"></div>
+        </div>
+      </AppLayout>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
