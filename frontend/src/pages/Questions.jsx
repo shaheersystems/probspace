@@ -108,7 +108,7 @@ const Questions = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1 space-y-4 rounded-md md:col-span-4">
+        <div className="col-span-8 space-y-4 rounded-md md:col-span-4">
           <div className="p-4 space-y-2 rounded-md bg-zinc-100 dark:bg-zinc-800">
             {" "}
             <Heading className={"font-display"}>
